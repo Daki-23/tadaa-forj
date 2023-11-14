@@ -1,0 +1,17 @@
+{
+  "providers": [
+    "awscloudformation"
+  ],
+  "projectName": "Tadaa",
+  "version": "3.1",
+  "frontend": "javascript",
+  "javascript": {
+    "framework": "react-native",
+    "config": {
+      "SourceDir": "/Users/naikgauraang/tadaa/TadaaApp-main/src",
+      "DistributionDir": "/",
+      "BuildCommand": "npx react-native run-ios",
+      "StartCommand": "npx react-native run-ios"
+    }
+  }
+}

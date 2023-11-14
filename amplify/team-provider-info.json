@@ -1,0 +1,15 @@
+{
+  "staging": {
+    "awscloudformation": {
+      "AuthRoleName": "amplify-tadaa-staging-72946-authRole",
+      "UnauthRoleArn": "arn:aws:iam::954491310075:role/amplify-tadaa-staging-72946-unauthRole",
+      "AuthRoleArn": "arn:aws:iam::954491310075:role/amplify-tadaa-staging-72946-authRole",
+      "Region": "us-west-2",
+      "DeploymentBucketName": "amplify-tadaa-staging-72946-deployment",
+      "UnauthRoleName": "amplify-tadaa-staging-72946-unauthRole",
+      "StackName": "amplify-tadaa-staging-72946",
+      "StackId": "arn:aws:cloudformation:us-west-2:954491310075:stack/amplify-tadaa-staging-72946/964d5940-82bf-11ee-a729-02823860dc43",
+      "AmplifyAppId": "dk2yfrz7dwy0r"
+    }
+  }
+}

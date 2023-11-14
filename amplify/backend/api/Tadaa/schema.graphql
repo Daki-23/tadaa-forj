@@ -1,0 +1,18 @@
+type User @model @auth(rules: [{allow: public}]) {
+  id: ID!
+  username: String
+  UserLibraryBooks: [UserLibraryBook] @hasMany(indexName: "byUser", fields: ["id"])
+}
+
+type UserLibraryBook @model @auth(rules: [{allow: public}]) {
+  id: ID!
+  favorite: Boolean
+  userID: ID! @index(name: "byUser")
+  bookID: ID! @index(name: "byBook")
+}
+
+type Book @model @auth(rules: [{allow: public}]) {
+  id: ID!
+  bookTitle: String
+  UserLibraryBooks: [UserLibraryBook] @hasMany(indexName: "byBook", fields: ["id"])
+}
