@@ -2,7 +2,7 @@ import React from 'react';
 import {View, StyleSheet} from 'react-native';
 import Icon from 'react-native-vector-icons/FontAwesome';
 
-function NavigationBar({
+function BottomNavigationBar({
   handleButtonPress,
 }: {
   handleButtonPress: (buttonName: string) => void;
@@ -57,4 +57,4 @@ const styles = StyleSheet.create({
   },
 });
 
-export default NavigationBar;
+export default BottomNavigationBar;

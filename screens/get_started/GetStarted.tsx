@@ -1,7 +1,20 @@
 import React from 'react';
 import {View, Text, StyleSheet, TouchableOpacity} from 'react-native';
+import {NavigationProp, useNavigation} from '@react-navigation/native';
+import {RootStackParamList} from '../../App';
 
-const GetStarted = ({onPress}: {onPress: () => void}) => {
+type GetStartedProps = {
+  onPress?: () => void;
+};
+
+const GetStarted: React.FC<GetStartedProps> = () => {
+  const navigation = useNavigation<NavigationProp<RootStackParamList>>();
+
+  const handlePress = () => {
+    console.log('Get Started Pressed!');
+    navigation.navigate('SignUp');
+  };
+
   return (
     <View style={styles.container}>
       {/* Content Container */}
@@ -19,7 +32,7 @@ const GetStarted = ({onPress}: {onPress: () => void}) => {
       </View>
 
       {/* Get Started Button */}
-      <TouchableOpacity style={styles.button} onPress={onPress}>
+      <TouchableOpacity style={styles.button} onPress={handlePress}>
         <Text style={styles.buttonText}>Get Started</Text>
       </TouchableOpacity>
     </View>
