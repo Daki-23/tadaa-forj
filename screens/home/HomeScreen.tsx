@@ -13,18 +13,20 @@ import SearchButton from '../../components/SearchButton';
 
 const HomeScreen: React.FC = () => {
   return (
-    <TouchableWithoutFeedback onPress={Keyboard.dismiss}>
-      <View style={styles.container}>
-        <Text style={styles.title}>Hello, friend</Text>
-        <HomeFeed />
-        <KeyboardAvoidingView
-          behavior={Platform.OS === 'ios' ? 'padding' : 'height'}
-          keyboardVerticalOffset={20}
-          style={styles.searchButtonContainer}>
-          <SearchButton />
-        </KeyboardAvoidingView>
-      </View>
-    </TouchableWithoutFeedback>
+    <View style={styles.container}>
+      <TouchableWithoutFeedback onPress={Keyboard.dismiss}>
+        <>
+          <Text style={styles.title}>Hello, friend</Text>
+          <HomeFeed />
+        </>
+      </TouchableWithoutFeedback>
+      <KeyboardAvoidingView
+        behavior={Platform.OS === 'ios' ? 'padding' : 'height'}
+        keyboardVerticalOffset={20}
+        style={styles.searchButtonContainer}>
+        <SearchButton />
+      </KeyboardAvoidingView>
+    </View>
   );
 };
 
