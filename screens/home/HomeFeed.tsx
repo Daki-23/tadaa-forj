@@ -5,8 +5,8 @@ import ListSection from './ListSection';
 const HomeFeed = () => {
   return (
     <ScrollView style={containerStyle}>
-      <ListSection title="Popular Lists" type="list" />
-      <ListSection title="Recommended Audiobooks" type="audiobook" />
+      <ListSection title="Continue Where You Left Off" type="list" />
+      <ListSection title="You Might Like" type="audiobook" />
     </ScrollView>
   );
 };

@@ -1,6 +1,6 @@
 import React from 'react';
 import {View, StyleSheet} from 'react-native';
-import Icon from 'react-native-vector-icons/FontAwesome';
+import Icon from 'react-native-vector-icons/AntDesign';
 
 function BottomNavigationBar({
   handleButtonPress,
@@ -12,17 +12,17 @@ function BottomNavigationBar({
       <View style={styles.section}>
         <Icon
           name="home"
-          size={24}
-          color="red"
+          size={30}
+          color={styles.icon.color}
           onPress={() => handleButtonPress('home')}
           style={styles.icon}
         />
       </View>
       <View style={styles.section}>
         <Icon
-          name="search"
-          size={24}
-          color="green"
+          name="search1"
+          size={30}
+          color={styles.icon.color}
           onPress={() => handleButtonPress('search')}
           style={styles.icon}
         />
@@ -30,8 +30,8 @@ function BottomNavigationBar({
       <View style={styles.section}>
         <Icon
           name="user"
-          size={24}
-          color="blue"
+          size={30}
+          color={styles.icon.color}
           onPress={() => handleButtonPress('user')}
           style={styles.icon}
         />
@@ -45,8 +45,8 @@ const styles = StyleSheet.create({
     flexDirection: 'row',
     justifyContent: 'space-between',
     backgroundColor: 'lightgrey',
-    paddingTop: 10,
-    paddingBottom: 10,
+    paddingTop: 15,
+    paddingBottom: 15,
   },
   section: {
     flex: 1,
@@ -54,6 +54,7 @@ const styles = StyleSheet.create({
   },
   icon: {
     alignSelf: 'center',
+    color: 'black',
   },
 });
 
