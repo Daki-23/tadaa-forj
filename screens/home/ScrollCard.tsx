@@ -1,8 +1,11 @@
 import React from 'react';
-import {View, Text, StyleSheet, Image} from 'react-native';
+import { Text, StyleSheet, Image, TouchableOpacity } from 'react-native';
+import { NavigationProp, useNavigation } from '@react-navigation/native';
+import { RootStackParamList } from '../../App';
 
 interface ScrollCardProps {
   data: {
+    id: number;
     title: string;
     coverImagePath: string;
     author: string;
@@ -13,15 +16,22 @@ interface ScrollCardProps {
 const ScrollCard: React.FC<ScrollCardProps> = ({data}) => {
   // Use type as index to get image
   const image = images[parseInt(data.coverImagePath, 10) - 1];
+  const navigation = useNavigation<NavigationProp<RootStackParamList>>();
+
+
+  const handleBookPress = () => {
+    console.log('Book Id: ', data.id);
+    navigation.navigate('BookPlayer', { bookId: data.id });
+  };
 
   return (
-    <View style={styles.card}>
+    <TouchableOpacity style={styles.card} onPress={handleBookPress}>
       {/* For remote images in S3 use: <Image source={{ uri: 'https://example.com/path/to/your/image.png' }} /> */}
       <Image style={styles.image} source={image} />
       <Text style={styles.title}>{data.title}</Text>
       <Text style={styles.author}>{data.author}</Text>
       {/* Add other details like chapters, duration as needed */}
-    </View>
+    </TouchableOpacity>
   );
 };
 

@@ -22,7 +22,8 @@
 ### How to Run
 
 #### iOS
-
+`sudo gem install cocoapods`
+`cd ios && pod install`
 `npx react-native run-ios`
 
 
